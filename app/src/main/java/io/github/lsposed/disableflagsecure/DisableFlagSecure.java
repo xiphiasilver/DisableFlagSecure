@@ -82,7 +82,7 @@ public class DisableFlagSecure extends XposedModule {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
             // Blackout permission check (S~T)
             try {
-                hookActivityManagerService(classLoader);
+                hookActivityManagerService(classLoader); // 여기까지 반영
             } catch (Throwable t) {
                 log("hook ActivityManagerService failed", t);
             }
